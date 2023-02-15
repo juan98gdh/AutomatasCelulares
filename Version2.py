@@ -20,7 +20,7 @@ screen = pygame.display.set_mode((width, height))
 bg = 0, 0, 0
 screen.fill(bg)
 
-cells = 401
+cells = 601
 
 xCells, yCells = cells, cells // 2
 
@@ -35,7 +35,7 @@ pause = True
 
 # some rules : 222 (full pyramid), 158 (dotted pyramid), 150 (fractal)
 # 110 (half pyramid), 90 (fractal), 99 (colored pyramid), 45 (), 30 (half random)
-bin_rule = list(np.binary_repr(131, width=8))
+bin_rule = list(np.binary_repr(110, width=8))
 bin_rule.reverse()
 
 
