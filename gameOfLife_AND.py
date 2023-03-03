@@ -31,17 +31,65 @@ gameState = np.zeros((xCells, yCells))
 
 pause = True
 
-# gameState[10, 10] = 1
-# gameState[11, 11] = 1
-# gameState[11, 12] = 1
-# gameState[10, 12] = 1
-# gameState[9, 12] = 1
 
-gameState[50,50] = 1
-gameState[49,50] = 1
-gameState[51,50] = 1
-gameState[51,49] = 1
-gameState[50,51] = 1
+gameState[10, 15] = 1
+gameState[11, 15] = 1
+gameState[10, 16] = 1
+gameState[11, 16] = 1
+
+gameState[14, 15] = 1
+gameState[15, 15] = 1
+gameState[15, 14] = 1
+gameState[15, 16] = 1
+gameState[10, 15] = 1
+gameState[17, 15] = 1
+gameState[16, 17] = 1
+gameState[16, 13] = 1
+
+gameState[18, 12] = 1
+gameState[19, 12] = 1
+gameState[20, 13] = 1
+gameState[21, 14] = 1
+gameState[21, 15] = 1
+gameState[21, 16] = 1
+gameState[20, 17] = 1
+gameState[19, 18] = 1
+gameState[18, 18] = 1
+
+gameState[26, 17] = 1
+gameState[29, 17] = 1
+gameState[30, 17] = 1
+gameState[31, 17] = 1
+gameState[31, 16] = 1
+gameState[30, 15] = 1
+
+gameState[35, 15] = 1
+gameState[35, 16] = 1
+gameState[37, 15] = 1
+gameState[38, 14] = 1
+gameState[38, 13] = 1
+gameState[38, 12] = 1
+gameState[39, 14] = 1
+gameState[39, 13] = 1
+gameState[39, 12] = 1
+gameState[37, 11] = 1
+gameState[35, 11] = 1
+gameState[35, 10] = 1
+
+gameState[44, 14] = 1
+gameState[45, 14] = 1
+gameState[44, 13] = 1
+gameState[45, 13] = 1
+
+# NEGADOR
+gameState[36, 24] = 1
+gameState[36, 23] = 1
+gameState[37, 23] = 1
+gameState[37, 25] = 1
+gameState[38, 25] = 1
+gameState[39, 25] = 1
+gameState[39, 26] = 1
+
 
 while True:
 
@@ -54,13 +102,13 @@ while True:
     pressed = pygame.key.get_pressed()
     if pressed[pygame.K_r]:
         newGameState = np.zeros((xCells, yCells))
-        print("Reset")
+        # print("Reset")
     if pressed[pygame.K_SPACE]:
-        print("Pause")
+        # print("Pause")
         pause = not pause
     if pressed[pygame.K_q]:
         print('\n[+] Exit with succcess...')
-        sys.exit()
+        sys.exit(0)
 
     # for event in pressKey:
     #    if event.type == pygame.KEYDOWN:
@@ -108,5 +156,5 @@ while True:
                 pygame.draw.polygon(screen, (255, 255, 255), poly, 0)
 
     gameState = np.copy(newGameState)
-    time.sleep(0.02)
+    time.sleep(0.05)
     pygame.display.flip()
