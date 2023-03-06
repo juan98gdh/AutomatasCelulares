@@ -35,7 +35,7 @@ pause = False
 
 # some rules : 222 (full pyramid), 158 (dotted pyramid), 150 (fractal)
 # 110 (half pyramid), 90 (fractal), 99 (colored pyramid), 45 (), 30 (half random), 22 (fractal)
-bin_rule = list(np.binary_repr(161, width=8))
+bin_rule = list(np.binary_repr(22, width=8))
 bin_rule.reverse()
 
 
